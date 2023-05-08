@@ -7,7 +7,7 @@
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "npm run open",
       "start_react": "",
-      "open": "concurrently \"node index.js\" \"start http://localhost:8000/ui5/fiorisandbox/index.html\"",
+      "open": "concurrently \"node index.js\" \"start http://localhost:8000/lesson_1\"",
       "build": "grunt build"
     },
     "author": "",
