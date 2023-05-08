@@ -5,9 +5,7 @@
   displayBlock="true">
   <Shell appWidthLimited="false">
     <App id="app" width="100%">
-        <HBox class="sapUiSmallMargin">
           <Title text="Привет мир!" class="sapUiTinyMargin" titleStyle="H1"/>
-        </HBox>
     </App>
   </Shell>
 </mvc:View>
