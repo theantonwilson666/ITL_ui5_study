@@ -41,8 +41,16 @@ sap.ui.define([
                         product_count: 10,
                         product_weight: 500,
                         product_unit: "Грамм",
-                    }
+                    },
 
+
+                    {
+                        product_id: 4,
+                        product_name: "Ватрушка",
+                        product_count: 10,
+                        product_weight: 500,
+                        product_unit: "Грамм",
+                    }
                 ]
             };
 

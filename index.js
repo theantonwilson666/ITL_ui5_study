@@ -10,7 +10,6 @@ dotenv.config();
 
 const server = connect();
 
-
 // Libs
 server.use('/resources', static(process.env.LIB_RESOURCES));
 server.use('/test-resources', static(process.env.LIB_TEST_RESOURCES));
