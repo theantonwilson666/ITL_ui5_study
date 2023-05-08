@@ -5,7 +5,11 @@
   displayBlock="true">
   <Shell appWidthLimited="false">
     <App id="app" width="100%">
+      <Page title="Заголовок">
+        <content>
           <Title text="Привет мир!" class="sapUiTinyMargin" titleStyle="H1"/>
+        </content>
+      </Page>
     </App>
   </Shell>
 </mvc:View>
