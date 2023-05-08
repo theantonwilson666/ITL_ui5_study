@@ -1,0 +1,11 @@
+<mvc:View
+  controllerName="study.lesson_1.controller.Main"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true">
+  <Shell appWidthLimited="false">
+    <App class="myFirstApp" id="app" width="100%">
+        <Text text="123"/>
+    </App>
+  </Shell>
+</mvc:View>

@@ -1,0 +1,18 @@
+# path to ui5 lib
+LIB_RESOURCES=C:/work/ui5_resources/sap-ui5-1.71.44/resources
+LIB_TEST_RESOURCES=C:/work/ui5_resources/sap-ui5-1.71.44/test-resources
+
+# port
+PORT=8000
+
+# backend url
+BACKEND_URL=http://10.11.12.4:8000
+
+#Auth
+LOGIN=VILSONAYU
+PASS=gqM5JTvyho
+
+#Deployment
+DEPLOY_SERVER=http://sap-tm.inthemelab.com:8000
+CLIENT=100
+LANGUAGE=RU

@@ -1,0 +1,37 @@
+{
+    "name": "ui5_study",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "npm run open",
+      "start_react": "",
+      "open": "concurrently \"node index.js\" \"start http://localhost:8000/ui5/fiorisandbox/index.html\"",
+      "build": "grunt build"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@ui5/builder": "^2.11.8",
+      "@ui5/cli": "^2.14.17",
+      "babel-cli": "^6.26.0",
+      "babel-preset-react-app": "^3.1.2",
+      "concurrently": "^7.5.0",
+      "connect": "^3.7.0",
+      "connect-compiler": "^0.1.3",
+      "dotenv": "^16.0.3",
+      "grunt": "^1.6.1",
+      "grunt-contrib-clean": "^2.0.1",
+      "grunt-openui5": "^0.18.4",
+      "http-proxy-middleware": "^2.0.6",
+      "livereload": "^0.9.3",
+      "npm": "^9.1.1",
+      "serve-static": "^1.15.0"
+    },
+    "devDependencies": {
+      "js-yaml": "^4.1.0",
+      "nwabap-ui5uploader": "^1.2.0"
+    }
+  }
+  
