@@ -7,7 +7,11 @@
     <App id="app" width="100%">
       <Page title="Заголовок">
         <content>
-          <Title text="Привет мир!" class="sapUiTinyMargin" titleStyle="H1"/>
+          <Title text="Привет мир!" class="boldText sapUiTinyMargin" titleStyle="H1"/>
+          
+          <VBox>
+            <Text class="sapUiSmallMargin" text="123"/>
+          </VBox>
         </content>
       </Page>
     </App>
