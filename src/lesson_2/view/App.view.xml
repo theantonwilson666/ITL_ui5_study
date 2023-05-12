@@ -1,0 +1,98 @@
+<mvc:View
+	controllerName="study.lesson_2.controller.Main"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:f="sap.f"
+	displayBlock="true">
+	<Shell appWidthLimited="false">
+		<App id="app" width="100%">
+			<f:DynamicPage>
+				<!-- DynamicPage Title -->
+				<f:title>
+					<f:DynamicPageTitle>
+						<f:heading>
+							<Title text="{i18n>pageTitle}" />
+						</f:heading>
+
+						<f:expandedContent>
+							<Label text="{i18n>pageDescription}" />
+						</f:expandedContent>
+
+						<f:actions>
+							<Button
+								text="{i18n>editButtonText}"
+								type="Emphasized"
+								press="toggleAreaPriority" />
+							<Button
+								visible="{state>/editMode}"
+								text="{i18n>cancelButtonText}"
+								type="Transparent" />
+							<Button
+								visible="{state>/editMode}"
+								text="{i18n>addItemButtonText}"
+								type="Transparent" />
+
+						</f:actions>
+					</f:DynamicPageTitle>
+				</f:title>
+				<f:content>
+
+					<IconTabBar>
+						<items>
+							<IconTabFilter text="{i18n>table}" key="table">
+								<Table id="idProductsTable"
+									inset="false"
+									items="{/data}"
+									class="sapFDynamicPageAlignContent"
+									width="auto">
+									<headerToolbar>
+										<Toolbar>
+											<Title text="Products" level="H2" />
+										</Toolbar>
+									</headerToolbar>
+									<columns>
+										<Column>
+											<Text text="{i18n>productColumn}" />
+										</Column>
+										<Column>
+											<Text text="{i18n>productCount}" />
+										</Column>
+										<Column>
+											<Text text="{i18n>productWeight}" />
+										</Column>
+										<Column>
+											<Text text="{i18n>productUnit}" />
+										</Column>
+									</columns>
+									<items>
+										<ColumnListItem>
+											<cells>
+												<ObjectIdentifier
+													title="{product_name}"
+													text="{product_id}" />
+												<Text
+													text="{product_count}" />
+												<Text
+													text="{product_weight}" />
+
+												<Text
+													text="{product_unit}" />
+
+											</cells>
+										</ColumnListItem>
+
+									</items>
+								</Table>
+							</IconTabFilter>
+
+							<IconTabFilter text="Структура" key="structure">
+								<Text text="Тест"/>
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</f:content>
+			</f:DynamicPage>
+		</App>
+	</Shell>
+</mvc:View>
