@@ -20,17 +20,16 @@
 						</f:expandedContent>
 
 						<f:actions>
+
 							<Button
-								text="{i18n>editButtonText}"
+								text="{= ${state>/editMode} ? 'Отменить' : 'Изменить' }"
 								type="Emphasized"
-								press="toggleAreaPriority" />
-							<Button
-								visible="{state>/editMode}"
-								text="{i18n>cancelButtonText}"
-								type="Transparent" />
+								press="onChangeButtonPress" />
+
 							<Button
 								visible="{state>/editMode}"
 								text="{i18n>addItemButtonText}"
+								press="onAddNewProductButtonPress"
 								type="Transparent" />
 
 						</f:actions>
@@ -41,53 +40,15 @@
 					<IconTabBar>
 						<items>
 							<IconTabFilter text="{i18n>table}" key="table">
-								<Table id="idProductsTable"
-									inset="false"
-									items="{/data}"
-									class="sapFDynamicPageAlignContent"
-									width="auto">
-									<headerToolbar>
-										<Toolbar>
-											<Title text="Products" level="H2" />
-										</Toolbar>
-									</headerToolbar>
-									<columns>
-										<Column>
-											<Text text="{i18n>productColumn}" />
-										</Column>
-										<Column>
-											<Text text="{i18n>productCount}" />
-										</Column>
-										<Column>
-											<Text text="{i18n>productWeight}" />
-										</Column>
-										<Column>
-											<Text text="{i18n>productUnit}" />
-										</Column>
-									</columns>
-									<items>
-										<ColumnListItem>
-											<cells>
-												<ObjectIdentifier
-													title="{product_name}"
-													text="{product_id}" />
-												<Text
-													text="{product_count}" />
-												<Text
-													text="{product_weight}" />
-
-												<Text
-													text="{product_unit}" />
-
-											</cells>
-										</ColumnListItem>
-
-									</items>
-								</Table>
+								<core:Fragment
+									fragmentName="study.lesson_2.view.tabs.Table"
+									type="XML" />
 							</IconTabFilter>
 
-							<IconTabFilter text="Структура" key="structure">
-								<Text text="Тест"/>
+							<IconTabFilter text="Плитки" key="structure">
+								<core:Fragment
+									fragmentName="study.lesson_2.view.tabs.Tile"
+									type="XML" />
 							</IconTabFilter>
 						</items>
 					</IconTabBar>

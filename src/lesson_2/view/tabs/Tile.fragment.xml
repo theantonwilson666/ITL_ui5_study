@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <HBox items="{/data}">
+        <GenericTile
+            class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+            header="{product_name}" subheader="{product_id}">
+            <TileContent unit="{product_weight} {product_unit}">
+                <NumericContent value="{product_count}"
+                    icon="sap-icon://line-charts"
+                    withMargin="false" />
+            </TileContent>
+        </GenericTile>
+    </HBox>
+</core:FragmentDefinition>

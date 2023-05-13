@@ -1,0 +1,38 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        id="mainDialog"
+        title="Product">
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm
+                    id="ProductForm"
+                    editable="true">
+                    <f:content>
+                        <Label text="ID" />
+                        <Input id="nameText" value="{/product_id}" />
+                        <Label text="Продукт." />
+                        <Input value="{/product_name}" />
+                        <Label text="Кол-во" />
+                        <Input value="{/product_count}" />
+                        <Label text="Вес" />
+                        <Input value="{/product_weight}" />
+                        <Label text="ЕИ" />
+                        <Input value="{/product_unit}" />
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+
+        </content>
+
+        <buttons>
+            <Button text="Save" visible="{= !${ui>/newEntry}}" press="onSaveProduct" />
+            <Button text="Add Product" visible="{ui>/newEntry}" press="onAddNewProduct" />
+            <Button text="Close" press="onCloseDialog" />
+        </buttons>
+
+
+    </Dialog>
+</core:FragmentDefinition>

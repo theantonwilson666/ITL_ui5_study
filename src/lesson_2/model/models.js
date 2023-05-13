@@ -24,6 +24,7 @@ sap.ui.define([
                         product_count: 10,
                         product_weight: 5,
                         product_unit: "Грамм",
+                        created_at: new Date()
                     },
 
 
@@ -33,6 +34,7 @@ sap.ui.define([
                         product_count: 1,
                         product_weight: 2,
                         product_unit: "Килограмм",
+                        created_at: new Date()
                     },
 
                     {
@@ -41,6 +43,7 @@ sap.ui.define([
                         product_count: 10,
                         product_weight: 500,
                         product_unit: "Грамм",
+                        created_at: new Date()
                     },
 
 
@@ -50,6 +53,7 @@ sap.ui.define([
                         product_count: 10,
                         product_weight: 500,
                         product_unit: "Грамм",
+                        created_at: new Date()
                     }
                 ]
             };

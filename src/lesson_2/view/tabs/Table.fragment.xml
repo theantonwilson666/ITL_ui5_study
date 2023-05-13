@@ -1,0 +1,56 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Table id="idProductsTable"
+        inset="false"
+        items="{/data}"
+        class="sapFDynamicPageAlignContent"
+        width="auto">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="Products" level="H2" />
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Text text="{i18n>productColumn}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>productCount}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>productWeight}" />
+            </Column>
+            <Column>
+                <Text text="{i18n>productUnit}" />
+            </Column>
+
+             <Column>
+                <Text text="Создано" />
+            </Column>
+
+        </columns>
+        <items>
+            <ColumnListItem press="onSelectProduct" type="Active">
+                <cells>
+                    <ObjectIdentifier
+                        title="{product_name}"
+                        text="{product_id}" />
+                    <Text
+                        text="{product_count}" />
+                    <Text
+                        text="{product_weight}"/>
+
+                    <Text
+                        text="{product_unit}" />
+
+                    <Text
+                        text="{path: 'created_at', formatter: '.formatter.formatDate' }" />    
+
+                </cells>
+            </ColumnListItem>
+
+        </items>
+    </Table>
+
+</core:FragmentDefinition>
