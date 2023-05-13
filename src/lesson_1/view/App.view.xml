@@ -9,7 +9,7 @@
 			<Page title="Заголовок">
 				<content>
 					<Title text="{/title}" class="boldText sapUiTinyMargin" titleStyle="H1" />
-					<!-- <Text text="Текущая система: {device>/os/name}" /> -->
+					<Text text="123" />
 
 					<Button text="Добавить запись"
 						press="addProduct"
