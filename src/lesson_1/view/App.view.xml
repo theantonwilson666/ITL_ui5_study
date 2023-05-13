@@ -8,8 +8,8 @@
       <Page title="Заголовок">
         <content>
           <Title text="Привет мир!" class="boldText sapUiTinyMargin" titleStyle="H1"/>
-          
-          <VBox>
+          <button text="Нажать надо" press="DoPress" icon="sap-icon://approvals"/>
+          <VBox id="mainbox">
             <Text class="sapUiSmallMargin" text="123"/>
           </VBox>
         </content>
