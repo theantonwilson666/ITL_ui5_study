@@ -1,0 +1,14 @@
+<mvc:View controllerName="study.lesson_3.controller.Main"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:dnd="sap.ui.core.dnd"
+    xmlns:control="intime.zpartners_registry.controls"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true">
+    <Page showHeader="false"
+        id="page">
+        <content>
+            <Text text="Главная страница" />
+        </content>
+    </Page>
+</mvc:View>
