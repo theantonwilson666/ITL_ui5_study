@@ -1,14 +1,72 @@
 <mvc:View controllerName="study.lesson_3.controller.Main"
     xmlns="sap.m"
+    xmlns:f="sap.f"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:dnd="sap.ui.core.dnd"
     xmlns:control="intime.zpartners_registry.controls"
     xmlns:form="sap.ui.layout.form"
     displayBlock="true">
-    <Page showHeader="false"
-        id="page">
-        <content>
-            <Text text="Главная страница" />
-        </content>
-    </Page>
+
+    <f:DynamicPage id="dynamicPageId"
+        toggleHeaderOnTitleClick="false">
+
+        <!-- DynamicPage Content -->
+        <f:content>
+
+            <Table id="idProductsTable"
+                inset="false"
+                items="{/data}"
+                class="sapFDynamicPageAlignContent"
+                width="auto">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Products" level="H2" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="{i18n>productColumn}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>productCount}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>productWeight}" />
+                    </Column>
+                    <Column>
+                        <Text text="{i18n>productUnit}" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Создано" />
+                    </Column>
+
+                </columns>
+                <items>
+                    <ColumnListItem press="onSelectProduct" type="Active">
+                        <cells>
+                            <ObjectIdentifier
+                                title="{product_name}"
+                                text="{product_id}" />
+                            <Text
+                                text="{product_count}" />
+                            <Text
+                                text="{product_weight}" />
+
+                            <Text
+                                text="{product_unit}" />
+
+                            <Text
+                                text="{path: 'created_at', formatter: '.formatter.formatDate' }" />
+
+                        </cells>
+                    </ColumnListItem>
+
+                </items>
+            </Table>
+        </f:content>
+
+    </f:DynamicPage>
+
+
 </mvc:View>

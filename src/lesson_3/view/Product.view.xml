@@ -1,0 +1,73 @@
+<mvc:View controllerName="study.lesson_3.controller.Detail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:control="intime.zpartners_registry.controls"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    displayBlock="true">
+    <Page showHeader="false"
+        id="productpage">
+        <content>
+            <f:Form
+                editable="false">
+                <f:title>
+                    <core:Title text="{/product_name}" />
+                </f:title>
+                <f:layout>
+                    <f:ResponsiveGridLayout
+                        labelSpanXL="4"
+                        labelSpanL="3"
+                        labelSpanM="4"
+                        labelSpanS="12"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        emptySpanL="4"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="2"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer title="Продукт">
+                        <f:formElements>
+                            <f:FormElement label="ID">
+                                <f:fields>
+                                    <Text text="{/product_id}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="Продукт">
+                                <f:fields>
+                                    <Text text="{/product_name}" />
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                    <f:FormContainer title="Веса">
+                        <f:formElements>
+                            <f:FormElement label="Количество">
+                                <f:fields>
+                                    <Text text="{/product_count}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="Вес">
+                                <f:fields>
+                                    <Text text="{/product_weight}" />
+                                </f:fields>
+                            </f:FormElement>
+
+                            <f:FormElement label="ЕИ">
+                                <f:fields>
+                                    <Text text="{/product_unit}" />
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+
+        </content>
+    </Page>
+</mvc:View>

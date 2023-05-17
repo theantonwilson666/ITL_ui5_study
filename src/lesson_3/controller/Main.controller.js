@@ -19,6 +19,24 @@ sap.ui.define(
 
             onInit: function () {
                 console.log('hello from controller');
+
+                this.getRouter().getRoute("mainpage").attachPatternMatched(this.onRouteMatched, this);
+            },
+
+            onRouteMatched: function(){
+
+                this.setStateProperty('layout', 'OneColumn');
+                
+
+            },
+
+            setStateProperty: function(sProperty, sValue){
+                const oStateModel = this.getView().getModel('state');
+                const oStateData = oStateModel.getData();
+
+                oStateData[sProperty] = sValue;
+
+                this.getView().getModel('state').updateBindings(true);
             },
 
             loadDialog: function (oParams) {
@@ -50,6 +68,22 @@ sap.ui.define(
                         }.bind(this)
                     );
                 }
+            },
+
+            getRouter: function(){
+                return this.getOwnerComponent().getRouter();
+            },
+
+            onSelectProduct: function (oEvent) {
+
+                const oProduct = oEvent.getSource().getBindingContext().getObject();
+
+                var oRouter = this.getRouter();
+                
+                oRouter.navTo("product", {
+                    productId: oProduct.product_id
+                });
+
             }
 
         });

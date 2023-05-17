@@ -65,7 +65,8 @@
                         "goHome": "sap-icon://home"
                     },
 
-                    "editMode": false
+                    "editMode": false,
+                    "layout": "OneColumn"
                 }
             }
         },
@@ -78,24 +79,38 @@
         "routing": {
             "config": {
                 "fullWidth": true,
-                "routerClass": "sap.m.routing.Router",
+                "routerClass": "sap.f.routing.Router",
                 "type": "View",
                 "viewType": "XML",
                 "async": true,
                 "viewPath": "study.lesson_3.view",
-                "controlId": "app",
-                "controlAggregation": "pages"
+                "controlId": "layout",
+                "controlAggregation": "beginColumnPages"
             },
-            "routes": [{
+            "routes": [
+                {
                     "pattern": "",
                     "name": "mainpage",
                     "target": "mainpage"
+                },
+
+                {
+                    "pattern": "product/{productId}",
+                    "name": "product",
+                    "target": "product"
                 }
             ],
             "targets": {
                 "mainpage": {
                     "viewid": "mainpage",
-                    "viewName": "MainPage"
+                    "viewName": "MainPage",
+                    "controlAggregation": "beginColumnPages"
+                },
+
+                "product": {
+                    "viewid": "productpage",
+                    "viewName": "Product",
+                    "controlAggregation": "midColumnPages"
                 }
             }
         }
