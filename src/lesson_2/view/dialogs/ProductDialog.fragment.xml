@@ -11,7 +11,7 @@
                     id="ProductForm"
                     editable="true">
                     <f:content>
-                        <Label text="ID" />
+                        <Label text="ММ" />
                         <Input id="nameText" value="{/product_id}" />
                         <Label text="Продукт." />
                         <Input value="{/product_name}" />
