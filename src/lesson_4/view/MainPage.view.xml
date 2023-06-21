@@ -1,0 +1,76 @@
+<mvc:View controllerName="study.lesson_4.controller.Main"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:dnd="sap.ui.core.dnd"
+    xmlns:control="intime.zpartners_registry.controls"
+    xmlns:form="sap.ui.layout.form"
+    displayBlock="true">
+
+    <f:DynamicPage id="dynamicPageId"
+        toggleHeaderOnTitleClick="false">
+
+        <!-- DynamicPage Content -->
+        <f:content>
+            <Text text="Привет, это урок 4" />
+            <Table id="_Book-Table"
+                inset="false"
+                items="{/ZSNN_BOOK_HEADER}"
+                class="sapFDynamicPageAlignContent"
+                width="auto">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Книги" level="H2" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="Книга" />
+                    </Column>
+
+                    <Column>
+                        <Text text="Название" />
+                    </Column>
+                    <Column>
+                        <Text text="Дата публикации" />
+                    </Column>
+                    <Column>
+                        <Text text="Кол-во страниц" />
+                    </Column>
+                    <!-- <Column>
+                        <Text text="Жанры" />
+                    </Column>
+                    <Column>
+                        <Text text="Авторы" />
+                    </Column> -->
+
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Image src="{CoverUrl}" width="5rem"/>
+
+                            <Text
+                                text="{Title}" />
+                            <Text
+                                text="{PublishDate}" />
+                            <Text
+                                text="{PagesNumber}" />
+
+                            <!-- <Text
+                                text="{Genres}" />
+
+                            <Text
+                                text="{Authors}" /> -->
+
+                        </cells>
+                    </ColumnListItem>
+
+                </items>
+            </Table>
+        </f:content>
+
+    </f:DynamicPage>
+
+
+</mvc:View>

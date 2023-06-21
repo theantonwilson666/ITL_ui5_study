@@ -1,0 +1,135 @@
+{
+  "_version": "1.32.0",
+  "sap.app": {
+    "id": "study.lesson_4",
+    "type": "application",
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZDEMO_BOOKS_SRV/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "2.0",
+          "annotations": ["annotation"]
+        }
+      },
+      "annotation": {
+        "type": "ODataAnnotation",
+        "uri": "localService/annotation.xml",
+        "settings": {
+          "localUri": "localService/annotation.xml"
+        }
+      }
+    },
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "ach": "ach"
+  },
+  "sap.ui": {
+    "fullWidth": true,
+    "technology": "UI5",
+    "icons": {
+      "icon": "sap-icon://task",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "study.lesson_4.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.93.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.f": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "": {
+        "dataSource": "mainService",
+        "settings": {
+          "serviceUrlParams": {
+            "sap-client": "100"
+          },
+          "defaultBindingMode": "TwoWay",
+          "useBatch": true,
+          "defaultCountMode": "Inline"
+        }
+      },
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "study.lesson_4.i18n.i18n"
+        }
+      },
+      "state": {
+        "type": "sap.ui.model.json.JSONModel",
+        "settings": {
+          "isDraft": false,
+          "icons": {
+            "goHome": "sap-icon://home"
+          },
+
+          "editMode": false,
+          "layout": "OneColumn"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+
+    "routing": {
+      "config": {
+        "fullWidth": true,
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "study.lesson_4.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "mainpage",
+          "target": "mainpage"
+        }
+      ],
+      "targets": {
+        "mainpage": {
+          "viewid": "mainpage",
+          "viewName": "MainPage"
+        }
+      }
+    }
+  }
+}
