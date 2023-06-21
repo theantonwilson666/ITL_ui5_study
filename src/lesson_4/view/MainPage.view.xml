@@ -37,12 +37,15 @@
                     <Column>
                         <Text text="Кол-во страниц" />
                     </Column>
-                    <!-- <Column>
+
+                    
+                   <Column>
                         <Text text="Жанры" />
                     </Column>
+                     
                     <Column>
                         <Text text="Авторы" />
-                    </Column> -->
+                    </Column> 
 
                 </columns>
                 <items>
@@ -56,6 +59,14 @@
                                 text="{PublishDate}" />
                             <Text
                                 text="{PagesNumber}" />
+
+                            <VBox items="{to_Genres}">
+                                <Text text="{Genre}"/>
+                            </VBox>
+
+                             <VBox items="{to_BookAuthors}">
+                                <Text text="{Name}"/>
+                            </VBox>
 
                             <!-- <Text
                                 text="{Genres}" />
